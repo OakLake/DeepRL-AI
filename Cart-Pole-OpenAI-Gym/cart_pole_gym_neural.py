@@ -42,7 +42,7 @@ best_score = 100
 count = 0
 Good_agents = []
 
-simL = int(1e5)
+simL = int(1e6)
 for i_episode in range(simL): # 42 trials
     H1 = np.random.randint(5,12)
     H2 = np.random.randint(2,5)
