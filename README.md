@@ -1,6 +1,12 @@
 # AI-Learning
 Learning and Artificial Intelligence in Robotics
+--------
+### Results:
 
+MountainCar-v0:
+- Using random weight search for fixed topology neural network.
+
+    ![Alt text](https://github.com/OakLake/AI-Learning/blob/master/MountainCar/MountainCar_NN.gif)
 
 --------
 ### Interesting Papers:
