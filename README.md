@@ -13,12 +13,12 @@ MountainCar-v0:
     <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/MountainCar/MountainCar_NN.gif">
     </p>
-    ![Alt text](https://github.com/OakLake/AI-Learning/blob/master/MountainCar/MountainCar_NN.gif)
     
 CartPole-v1:
 - Q-Learning.
-
-    ![Alt text](https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif)
+    <p align="center">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif">
+    </p>
 
 --------
 ### Interesting Papers:
