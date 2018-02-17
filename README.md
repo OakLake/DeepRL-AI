@@ -9,18 +9,18 @@ Learning and Artificial Intelligence in Robotics
 --------
 ### Results:
 
-#MountainCar-v0:
+# MountainCar-v0:
 - Using random weight search for fixed topology neural network.
     <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/MountainCar/MountainCar_NN.gif">
     </p>
     
-#CartPole-v1:
+# CartPole-v1:
 - Q-Learning.
     <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif">
     </p>
-#LunarLander-v2:
+# LunarLander-v2:
 - Deep Q-Learning.
 <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/clever_girl.gif">
