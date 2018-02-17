@@ -23,10 +23,10 @@ Learning and Artificial Intelligence in Robotics
 #LunarLander-v2:
 - Deep Q-Learning.
 <p align="left">
-    <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/clever_girl.gif">
+    <img width = 200 height = 200 src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/clever_girl.gif">
     </p>
 <p align="right">
-    <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/landing.gif">
+    <img width = 200 height = 200 src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/landing.gif">
     </p>
 --------
 ### Interesting Papers:
