@@ -12,6 +12,11 @@ MountainCar-v0:
 - Using random weight search for fixed topology neural network.
 
     ![Alt text](https://github.com/OakLake/AI-Learning/blob/master/MountainCar/MountainCar_NN.gif)
+    
+CartPole-v1:
+- Q-Learning.
+
+    ![Alt text](https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif)
 
 --------
 ### Interesting Papers:
