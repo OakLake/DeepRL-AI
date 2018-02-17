@@ -21,7 +21,7 @@ Learning and Artificial Intelligence in Robotics
     <img src="https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif">
     </p>
 ##### LunarLander-v2:
-- Deep Q-Learning.
+- Deep Q-Learning for policy learning, DNN for evaluating Q(s,a).
 <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/clever_girl.gif">
     </p>
