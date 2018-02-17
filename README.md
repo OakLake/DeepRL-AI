@@ -10,7 +10,9 @@ Learning and Artificial Intelligence in Robotics
 
 MountainCar-v0:
 - Using random weight search for fixed topology neural network.
-
+    <p align="center">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/MountainCar/MountainCar_NN.gif">
+    </p>
     ![Alt text](https://github.com/OakLake/AI-Learning/blob/master/MountainCar/MountainCar_NN.gif)
     
 CartPole-v1:
