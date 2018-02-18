@@ -46,7 +46,7 @@ NUM_OUTPUT  = 4
 reward_decay=0.96
 epsilon = 0.02
 
-for learning_rate in [1e-5,1e-4,1e-3,1e-2]:
+for learning_rate in [1e-3,1e-2,1e-1]:
     graph = tf.Graph()
 
     with graph.as_default():
