@@ -21,7 +21,7 @@ Learning and Artificial Intelligence in Robotics
     <img src="https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif">
     </p>
 ##### LunarLander-v2:
-- Deep Q-Learning.
+- Deep Q-Learning for policy learning, DNN for evaluating Q(s,a).
 <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/clever_girl.gif">
     </p>
@@ -30,6 +30,8 @@ Learning and Artificial Intelligence in Robotics
     <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/landing.gif">
     </p>
 --------
-### Interesting Papers:
+
+### Interesting Resouces:
 
 - Welcoming the Era of Deep Neuroevolution: https://eng.uber.com/deep-neuroevolution/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BzyxkMF5OTd%2BI48jAyJJ%2B2A%3D%3D
+- MIT Deep-RL self-driving cars: https://selfdrivingcars.mit.edu
