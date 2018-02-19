@@ -48,7 +48,9 @@ NUM_OUTPUT  = 4
 reward_decay=0.99
 epsilon = 0.005
 
+<<<<<<< HEAD
 for learning_rate in [0.005]:
+=======
     graph = tf.Graph()
 
     with graph.as_default():
