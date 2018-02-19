@@ -51,6 +51,8 @@ epsilon = 0.005
 <<<<<<< HEAD
 for learning_rate in [0.005]:
 =======
+for learning_rate in [1e-3,1e-2,1e-1]:
+>>>>>>> b098590169d2d4baba4f9c104f7e87e11018b79e
     graph = tf.Graph()
 
     with graph.as_default():
