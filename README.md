@@ -4,6 +4,7 @@ Learning and Artificial Intelligence in Robotics
 ### Contents:
 - Fixed Topology Neural Network Search.
 - Q-Learning.
+- Deep RL Policy Network.
 - Deep Q-Learning (DQN).
 
 --------
@@ -21,7 +22,7 @@ Learning and Artificial Intelligence in Robotics
     <img src="https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif">
     </p>
 ##### LunarLander-v2:
-- Deep Q-Learning for policy learning, DNN for evaluating Q(s,a).
+- Deep RL policy learning.
 <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/clever_girl.gif">
     </p>
