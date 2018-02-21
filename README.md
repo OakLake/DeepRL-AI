@@ -6,6 +6,7 @@ Learning and Artificial Intelligence in Robotics
 - Q-Learning.
 - Deep RL Policy Network.
 - Deep Q-Learning (DQN).
+- Deep Q-Learning (DQN) with target network implementation.
 
 --------
 ### Results:
