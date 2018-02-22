@@ -43,3 +43,5 @@ Learning and Artificial Intelligence in Robotics
 
 - Welcoming the Era of Deep Neuroevolution: https://eng.uber.com/deep-neuroevolution/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BzyxkMF5OTd%2BI48jAyJJ%2B2A%3D%3D
 - MIT Deep-RL self-driving cars: https://selfdrivingcars.mit.edu
+- Deep RL lecture by David Silver UCL: http://www0.cs.ucl.ac.uk/staff/d.silver/web/Resources_files/deep_rl.pdf
+- DQN Nature paper, 'Human-level control through deep reinforcement learning' (2015)
