@@ -30,7 +30,7 @@ Learning and Artificial Intelligence in Robotics
     </p>
     paremeters, for below:
     - refresh target net every 10 episodes.
-    - skip 2 frames.
+    - skip 3 frames.
     - minibatch size 32.
     - at episode 460.
     
