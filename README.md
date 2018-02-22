@@ -32,6 +32,7 @@ Learning and Artificial Intelligence in Robotics
     - refresh target net every 10 episodes.
     - skip 2 frames.
     - minibatch size 32.
+    - at episode 460.
     
     <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/refreshNet10_skip3_batch32_frame460_NICE.gif">
