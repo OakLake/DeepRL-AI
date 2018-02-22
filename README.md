@@ -23,7 +23,7 @@ Learning and Artificial Intelligence in Robotics
     <img src="https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif">
     </p>
 ##### LunarLander-v2:
-- Deep Q Learning with frame skipping(3frames for each action) & target network updated at (epsiode%2==0).
+- Deep Q Learning with frame skipping(repeat same action for 3 frames) & target network updated at (epsiode%2==0).
     landing at epsiode 720:
     <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/so_cool.gif">
