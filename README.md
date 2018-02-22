@@ -18,7 +18,7 @@ Learning and Artificial Intelligence in Robotics
     </p>
     
 ##### CartPole-v1:
-- Q-Learning.
+- Tabular Q-Learning.
     <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif">
     </p>
