@@ -28,6 +28,14 @@ Learning and Artificial Intelligence in Robotics
     <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/so_cool.gif">
     </p>
+    paremeters, for below:
+    - refresh target net every 10 episodes.
+    - skip 2 frames.
+    - minibatch size 32.
+    <p align="center">
+    <img src=" https://github.com/OakLake/AI-Learning/blob/master/LunarLander/refreshNet10_skip3_batch32_frame460_NICE.gif">
+    </p>
+   
     
 - Deep RL policy learning.
 <p align="center">
