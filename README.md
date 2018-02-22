@@ -6,7 +6,7 @@ Learning and Artificial Intelligence in Robotics
 - Q-Learning.
 - Deep RL Policy Network.
 - Deep Q-Learning (DQN).
-- Deep Q-Learning (DQN) with target network implementation.
+- Deep Q-Learning (DQN) with target network & frame skipping implementation.
 
 --------
 ### Results:
@@ -23,6 +23,12 @@ Learning and Artificial Intelligence in Robotics
     <img src="https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif">
     </p>
 ##### LunarLander-v2:
+- Deep Q Learning with frame skipping(3frames for each action) & target network updated at (epsiode%2==0).
+    landing at epsiode 720:
+    <p align="center">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/so_cool.gif">
+    </p>
+    
 - Deep RL policy learning.
 <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/clever_girl.gif">
