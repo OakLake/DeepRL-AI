@@ -120,7 +120,7 @@ for batch_size in [32,64]:
             scores = []
             memory = []
 
-            D = 500000
+            D = 100000
             max_trial = 1000
              # ~0.01% of memory to train on each time step >> for 1 full episode of 1000 trials whole memory retrain
 
@@ -150,15 +150,16 @@ for batch_size in [32,64]:
                     else:
                         action_V = session.run([predictions],feed_dict = {tf_X:[state0],dropout:1.})[0][0]
                         action = np.argmax(action_V)
-                    state, reward, done, _ = env.step(action)
-                    rtn += reward
-                    reward = np.clip(reward,-1,1) # Clipping rewards
+                    for skip in range(2):
+                        state, reward, done, _ = env.step(action)
+                        rtn += reward
+                        reward = np.clip(reward,-1,1) # Clipping rewards
 
-                    # save to memory:
-                    memory.append((state0,action,reward,state,done))
+                        # save to memory:
+                        memory.append((state0,action,reward,state,done))
 
-                    # update states
-                    state0 = state
+                        # update states
+                        state0 = state
 
                     # Learning
                     # updating target network:
