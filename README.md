@@ -14,19 +14,19 @@ Learning and Artificial Intelligence in Robotics
 ##### MountainCar-v0:
 - Using random weight search for fixed topology neural network.
     <p align="center">
-    <img src="https://github.com/OakLake/AI-Learning/blob/master/MountainCar/MountainCar_NN.gif">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/MountainCar_NN.gif">
     </p>
     
 ##### CartPole-v1:
 - Tabular Q-Learning.
     <p align="center">
-    <img src="https://github.com/OakLake/AI-Learning/blob/master/CartPole_RL.gif">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/CartPole_RL.gif">
     </p>
 ##### LunarLander-v2:
 - Deep Q Learning with frame skipping(repeat same action for 3 frames), target network updated at (epsiode%2==0) & reward clipping(-1,1).
     landing at epsiode 720:
     <p align="center">
-    <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/so_cool.gif">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/so_cool.gif">
     </p>
     paremeters, for below:
     - refresh target net every 10 episodes.
@@ -35,17 +35,17 @@ Learning and Artificial Intelligence in Robotics
     - at episode 460.
     
     <p align="center">
-    <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/refreshNet10_skip3_batch32_frame460_NICE.gif">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/refreshNet10_skip3_batch32_frame460_NICE.gif">
     </p>
    
     
 - Deep RL policy learning.
 <p align="center">
-    <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/clever_girl.gif">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/clever_girl.gif">
     </p>
     
 <p align="center">
-    <img src="https://github.com/OakLake/AI-Learning/blob/master/LunarLander/landing.gif">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/landing.gif">
     </p>
 --------
 
