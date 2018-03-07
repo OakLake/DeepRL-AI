@@ -2,7 +2,7 @@
 # Sammy Hasan
 # 2017
 
-import gym, random
+import gym, random,sys
 import numpy as np
 
 
@@ -38,7 +38,7 @@ class Agent():
 env = gym.make('CartPole-v1')
 env.reset()
 
-best_score = 100
+best_score = 250
 count = 0
 Good_agents = []
 
@@ -55,7 +55,7 @@ for i_episode in range(simL): # 42 trials
         action = agent.react(observation)
         observation, reward, done, info = env.step(action)
         if done:
-            print ("Episode {} finished after {} timesteps ::: {}% ".format(i_episode,t+1,100*i_episode/simL))
+            print ("Episode {} finished after {} timesteps ::: ".format(i_episode,t+1),"{0:.2f}%".format(100*i_episode/simL))
             if (t+1) > best_score:
                 count += 1
                 best_score = t+1
