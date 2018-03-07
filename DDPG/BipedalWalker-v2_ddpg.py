@@ -256,7 +256,7 @@ class Memory(object):
     def remember(self,new_data):
         self.internal_mem.append(new_data)
         if len(self.internal_mem) > self.max_size:
-            self.internal.pop(0)
+            self.internal_mem.pop(0)
 
 ############################################ Ornstein Uhlenbeck Action Noise ############################################
 # from https://github.com/openai/baselines/blob/master/baselines/ddpg/noise.py
