@@ -6,7 +6,8 @@ Learning and Artificial Intelligence in Robotics
 - Q-Learning.
 - Deep RL Policy Network.
 - Deep Q-Learning (DQN).
-- Deep Q-Learning (DQN) +[target network, reward clipping, frame skipping]
+- Deep Q-Learning (DQN) +[target network, reward clipping, frame skipping].
+- Deep Deterministic Policy Gradient (DDPG).
 
 --------
 ### Results:
@@ -47,6 +48,13 @@ Learning and Artificial Intelligence in Robotics
 <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/landing.gif">
     </p>
+    
+##### InvertedPendulum-v2:
+- Deep Deterministic Policy Gradient (DDPG).
+<p align="center">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/InvertedPendulum_v2_DDPG_9x1000%2B720episodes_SOLVED.gif">
+    </p>
+
 --------
 
 ### Interesting Resouces:
