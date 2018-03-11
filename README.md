@@ -54,8 +54,7 @@ Learning and Artificial Intelligence in Robotics
 <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/InvertedPendulum_v2_DDPG_9x1000%2B720episodes_SOLVED.gif">
 </p>
-<p>
-align="center">
+<p align="center">
     <img src="https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Pendulum_v0_8360.gif">
 </p>
     
