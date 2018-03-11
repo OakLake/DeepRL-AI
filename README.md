@@ -51,9 +51,13 @@ Learning and Artificial Intelligence in Robotics
     
 ##### InvertedPendulum-v2:
 - Deep Deterministic Policy Gradient (DDPG).
-<p align="center">
+<p align="left">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/InvertedPendulum_v2_DDPG_9x1000%2B720episodes_SOLVED.gif">
-    </p>
+</p>
+<p align="left">
+    <img src="https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Pendulum_v0_8360.gif">
+</p>
+    
 
 --------
 
