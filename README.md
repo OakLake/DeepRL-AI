@@ -63,7 +63,8 @@ This new change allows for faster learning, solving an issue where the algorithm
     <img src="https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Pendulum_v0_8360.gif">
 </p>
 
-    [![alt text](http://example.com/exampl.png)](https://www.youtube.com/watch?v=fXbqDDaJDvg&feature=youtu.be "InvertedDoublePendulum")
+
+[![alt text](https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Still_InvertedDoublePendulum_v2.jpg)](https://www.youtube.com/watch?v=fXbqDDaJDvg&feature=youtu.be "InvertedDoublePendulum")
 
 --------
 
