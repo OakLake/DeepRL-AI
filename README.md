@@ -69,7 +69,7 @@ This new change allows for faster learning, solving an issue where the algorithm
 
 ##### InvertedPendulum-v2:
 <p align="center">
-    <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/InvertedPendulum_v2_DDPG_9x1000%2B720episodes_SOLVED.gif">
+    <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/InvertedPendulum_v2_DDPG_9x1000%2B720episodes_SOLVED_480px.gif">
 </p>
 
 ##### Pendulum-v0:
