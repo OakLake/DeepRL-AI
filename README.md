@@ -61,12 +61,6 @@ Learning and Artificial Intelligence in Robotics
 -------
 ### Deep Deterministic Policy Gradient (DDPG).
 
-
-
-InvertedPendulum_v2 & Pendulum_v0 are based on the same algorithm for different Gym envs, InvertedDoublePendulum_v2 uses an enhanced learning method.
-
-This new change allows for faster learning, solving an issue where the algorithm would show suboptimal and non learning behaviour before suddnly increasing its score and learning, which might not occur at all!. The artifact of which is the algorithm sticking to a set actions, the new learning method performs much better by training the networks on a random policy [choosing random actions] before allowing the algoirthm to apply its action to the Gym env.
-
 ##### InvertedPendulum-v2:
 <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/InvertedPendulum_v2_DDPG_9x1000%2B720episodes_SOLVED_480px.gif">
