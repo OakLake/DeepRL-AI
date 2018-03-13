@@ -12,24 +12,26 @@ Learning and Artificial Intelligence in Robotics
 --------
 ### Results:
 
-##### Random Neural Network
-### MountainCar-v0:
+### Random Neural Network
+
+##### MountainCar-v0:
 - Using random weight search for fixed topology neural network.
     <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/MountainCar_NN.gif">
     </p>
 
 --------
-##### Q-Learning:
-### CartPole-v1:
+### Q-Learning
+
+##### CartPole-v1:
 - Tabular Q-Learning.
     <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/CartPole_RL.gif">
     </p>
 
 --------
-##### Deep Q-Learning
-### LunarLander-v2:
+### Deep Q-Learning
+##### LunarLander-v2:
 - Deep Q Learning with frame skipping(repeat same action for 3 frames), target network updated at (epsiode%2==0) & reward clipping(-1,1).
     landing at epsiode 720:
     <p align="center">
@@ -46,8 +48,8 @@ Learning and Artificial Intelligence in Robotics
     </p>
    
 -------
-##### Deep RL Policy
-### LunarLander-v2:
+### Deep RL Policy
+##### LunarLander-v2:
 <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/clever_girl.gif">
     </p>
@@ -57,7 +59,7 @@ Learning and Artificial Intelligence in Robotics
     </p>
     
 -------
-##### Deep Deterministic Policy Gradient (DDPG).
+### Deep Deterministic Policy Gradient (DDPG).
 
 
 
@@ -65,17 +67,17 @@ InvertedPendulum_v2 & Pendulum_v0 are based on the same algorithm for different 
 
 This new change allows for faster learning, solving an issue where the algorithm would show suboptimal and non learning behaviour before suddnly increasing its score and learning, which might not occur at all!. The artifact of which is the algorithm sticking to a set actions, the new learning method performs much better by training the networks on a random policy [choosing random actions] before allowing the algoirthm to apply its action to the Gym env.
 
-### InvertedPendulum-v2:
+##### InvertedPendulum-v2:
 <p align="center">
     <img src="https://github.com/OakLake/AI-Learning/blob/master/GIFS/InvertedPendulum_v2_DDPG_9x1000%2B720episodes_SOLVED.gif">
 </p>
 
-### Pendulum-v0:
+##### Pendulum-v0:
 <p align="center">
     <img src="https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Pendulum_v0_8360.gif">
 </p>
 
-### InvertedDoublePendulum-v2:
+##### InvertedDoublePendulum-v2:
 img links to youtube video:
 [![alt text](https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Still_InvertedDoublePendulum_v2.jpg)](https://www.youtube.com/watch?v=fXbqDDaJDvg&feature=youtu.be "InvertedDoublePendulum")
 
