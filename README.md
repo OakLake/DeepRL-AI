@@ -64,7 +64,10 @@ This new change allows for faster learning, solving an issue where the algorithm
 </p>
 
 
+img links to youtube video:
 [![alt text](https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Still_InvertedDoublePendulum_v2.jpg)](https://www.youtube.com/watch?v=fXbqDDaJDvg&feature=youtu.be "InvertedDoublePendulum")
+
+Link: https://youtu.be/fXbqDDaJDvg
 
 --------
 
