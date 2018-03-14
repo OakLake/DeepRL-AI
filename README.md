@@ -79,7 +79,7 @@ Learning and Artificial Intelligence in Robotics
 Link: https://youtu.be/fXbqDDaJDvg
 
 ##### Reacher-v2:
-<img src="https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Reacher_v2.gif" width="100" height="100" /> <img src="https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Reacher_v2_2.gif" width="100" height="100" /> <img src="https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Reacher_v2_3.gif" width="100" height="100" />
+<img src="https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Reacher_v2.gif" width="280" height="280" /> <img src="https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Reacher_v2_2.gif" width="280" height="280" /> <img src="https://github.com/OakLake/DeepRL-AI/blob/master/GIFS/Reacher_v2_3.gif" width="280" height="280" />
 
 --------
 
