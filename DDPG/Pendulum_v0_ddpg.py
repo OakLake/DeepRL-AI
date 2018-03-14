@@ -51,9 +51,6 @@ OrnUhl_MEAN   = np.zeros((NUM_ACTION,1))
 
 ############################################ ActorNetwork & CriticNetwork ############################################
 
-# ActorNetwork & CriticNetwork Classes from: https://github.com/pemami4911/deep-rl/blob/master/ddpg/ddpg.py
-# seem to be faster than low level api implementation
-
 class ActorNetwork(object):
     """
     Input to the network is the state, output is the action
@@ -95,28 +92,27 @@ class ActorNetwork(object):
         # Combine the gradients here
         self.unnormalized_actor_gradients = tf.gradients(
             self.scaled_out, self.network_params, -self.action_gradient)
-        self.actor_gradients = list(map(lambda x: tf.div(x, self.batch_size), self.unnormalized_actor_gradients))
+        self.clipped_gradients = [tf.clip_by_norm(grad , 5.0) for grad in self.unnormalized_actor_gradients]
+        self.actor_gradients = list(map(lambda x: tf.div(x, self.batch_size), self.clipped_gradients))
 
         # Optimization Op
-        self.optimize = tf.train.AdamOptimizer(self.learning_rate).\
-            apply_gradients(zip(self.actor_gradients, self.network_params))
+        self.update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
+        with tf.control_dependencies(self.update_ops):
+            self.optimize = tf.train.AdamOptimizer(self.learning_rate).apply_gradients(zip(self.actor_gradients, self.network_params))
 
         self.num_trainable_vars = len(
             self.network_params) + len(self.target_network_params)
 
     def create_actor_network(self):
-        inputs = tflearn.input_data(shape=[None, self.s_dim])
-        net = tflearn.fully_connected(inputs, 400)
-        net = tflearn.layers.normalization.batch_normalization(net)
-        net = tflearn.activations.relu(net)
-        net = tflearn.fully_connected(net, 300)
-        net = tflearn.layers.normalization.batch_normalization(net)
-        net = tflearn.activations.relu(net)
-        # Final layer weights are init to Uniform[-3e-3, 3e-3]
-        w_init = tflearn.initializations.uniform(minval=-0.003, maxval=0.003)
-        out = tflearn.fully_connected(
-            net, self.a_dim, activation='tanh', weights_init=w_init)
-        # Scale output to -action_bound to action_bound
+        inputs = tf.placeholder(tf.float32,shape=(None,self.s_dim))
+        net = tf.layers.dense(inputs,400)
+        net = tf.layers.batch_normalization(net)
+        net = tf.nn.relu(net)
+        net = tf.layers.dense(net,300)
+        net = tf.layers.batch_normalization(net)
+        net = tf.nn.relu(net)
+        w_init = tf.random_uniform_initializer(minval=-0.003, maxval=0.003)
+        out =  tf.layers.dense(net,self.a_dim,activation = tf.nn.tanh,kernel_initializer = w_init )
         scaled_out = tf.multiply(out, self.action_bound)
         return inputs, out, scaled_out
 
@@ -178,9 +174,10 @@ class CriticNetwork(object):
         self.predicted_q_value = tf.placeholder(tf.float32, [None, 1])
 
         # Define loss and optimization Op
-        self.loss = tflearn.mean_square(self.predicted_q_value, self.out)
-        self.optimize = tf.train.AdamOptimizer(
-            self.learning_rate).minimize(self.loss)
+        self.loss = tf.losses.mean_squared_error(self.predicted_q_value, self.out)
+        self.update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
+        with tf.control_dependencies(self.update_ops):
+            self.optimize = tf.train.AdamOptimizer(self.learning_rate).minimize(self.loss)
 
         # Get the gradient of the net w.r.t. the action.
         # For each action in the minibatch (i.e., for each x in xs),
@@ -190,24 +187,26 @@ class CriticNetwork(object):
         self.action_grads = tf.gradients(self.out, self.action)
 
     def create_critic_network(self):
-        inputs = tflearn.input_data(shape=[None, self.s_dim])
-        action = tflearn.input_data(shape=[None, self.a_dim])
-        net = tflearn.fully_connected(inputs, 400)
-        net = tflearn.layers.normalization.batch_normalization(net)
-        net = tflearn.activations.relu(net)
-
+        inputs = tf.placeholder(tf.float32,shape=(None,self.s_dim))
+        action = tf.placeholder(tf.float32,shape=(None,self.a_dim))
+        net = tf.layers.dense(inputs,400)
+        net = tf.layers.batch_normalization(net)
+        net = tf.nn.relu(net)
         # Add the action tensor in the 2nd hidden layer
         # Use two temp layers to get the corresponding weights and biases
-        t1 = tflearn.fully_connected(net, 300)
-        t2 = tflearn.fully_connected(action, 300)
+        t1 = tf.layers.dense(net,300)
+        t2 = tf.layers.dense(action,300)
 
-        net = tflearn.activation(
-            tf.matmul(net, t1.W) + tf.matmul(action, t2.W) + t2.b, activation='relu')
+        net = tf.add(t1, t2)
+        net = tf.layers.batch_normalization(net)
+        # net = tf.matmul(net, t1.kernel) + tf.matmul(action, t2w.kernel) + t2.bias
+        net = tf.nn.relu(net)
+
 
         # linear layer connected to 1 output representing Q(s,a)
         # Weights are init to Uniform[-3e-3, 3e-3]
-        w_init = tflearn.initializations.uniform(minval=-0.003, maxval=0.003)
-        out = tflearn.fully_connected(net, 1, weights_init=w_init)
+        w_init = tf.random_uniform_initializer(minval=-0.003, maxval=0.003)
+        out =  tf.layers.dense(net,1,kernel_initializer = w_init )
         return inputs, action, out
 
     def train(self, inputs, action, predicted_q_value):
