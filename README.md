@@ -8,6 +8,7 @@ Learning and Artificial Intelligence in Robotics
 - Deep Q-Learning (DQN).
 - Deep Q-Learning (DQN) +[target network, reward clipping, frame skipping].
 - Deep Deterministic Policy Gradient (DDPG).
+- Deep Neuroevolution. [working, no results to show!]
 
 --------
 ### Results:
@@ -91,3 +92,4 @@ Link: https://youtu.be/fXbqDDaJDvg
 - Deep RL lecture by David Silver UCL: http://www0.cs.ucl.ac.uk/staff/d.silver/web/Resources_files/deep_rl.pdf
 - DQN Nature paper, 'Human-level control through deep reinforcement learning' (2015)
 - DDPG Paper, 'Continuous control with deep reinforcement learning' https://arxiv.org/abs/1509.02971
+- Deep Neuroevolution @ UberAI Labs, https://arxiv.org/abs/1712.06567
