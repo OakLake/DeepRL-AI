@@ -11,12 +11,14 @@ def softmax(x):
 
 class NeuralAgent():
     '''Agent with fixed neural network stucture, with swish activation function then sigmoid'''
-    def __init__(self,n_struct,func):
+    def __init__(self,n_struct,func,mu=0,sigma=1):
         self.activation_func = func
         self.nn_struct = n_struct
-        self.W0 = np.random.rand(self.nn_struct[0],self.nn_struct[1]) - 0.5
-        self.W1 = np.random.rand(self.nn_struct[1],self.nn_struct[2]) - 0.5
-        self.W2 = np.random.rand(self.nn_struct[2],self.nn_struct[3]) - 0.5
+        self.mu = mu
+        self.sigma = sigma
+        self.W0 = np.random.normal(self.mu,self.sigma,(self.nn_struct[0],self.nn_struct[1]) )
+        self.W1 = np.random.normal(self.mu,self.sigma,(self.nn_struct[1],self.nn_struct[2]) )
+        self.W2 = np.random.normal(self.mu,self.sigma,(self.nn_struct[2],self.nn_struct[3]) )
         self.B1 = [0]*(self.nn_struct[1])
         self.B2 = [0]*(self.nn_struct[2])
         self.B3 = [0]*(self.nn_struct[3])
@@ -38,12 +40,12 @@ class NeuralAgent():
 
     def mutate(self,factor):
         mutant = NeuralAgent(self.nn_struct,self.activation_func)
-        mutant.W0 = self.W0 + (np.random.rand(self.nn_struct[0],self.nn_struct[1]) - 0.5) * factor
-        mutant.W1 = self.W1 + (np.random.rand(self.nn_struct[1],self.nn_struct[2]) - 0.5) * factor
-        mutant.W2 = self.W2 + (np.random.rand(self.nn_struct[2],self.nn_struct[3]) - 0.5) * factor
-        mutant.B1 = self.B1 + (np.random.rand(self.nn_struct[1]) - 0.5) * factor
-        mutant.B2 = self.B2 + (np.random.rand(self.nn_struct[2]) - 0.5) * factor
-        mutant.B3 = self.B3 + (np.random.rand(self.nn_struct[3]) - 0.5) * factor
+        mutant.W0 = self.W0 + ( np.random.normal(self.mu,self.sigma,(self.nn_struct[0],self.nn_struct[1]) ) ) * factor
+        mutant.W1 = self.W1 + ( np.random.normal(self.mu,self.sigma,(self.nn_struct[1],self.nn_struct[2]) ) ) * factor
+        mutant.W2 = self.W2 + ( np.random.normal(self.mu,self.sigma,(self.nn_struct[2],self.nn_struct[3]) ) ) * factor
+        mutant.B1 = self.B1 + (np.random.normal(self.mu,self.sigma,self.nn_struct[1]) ) * factor
+        mutant.B2 = self.B2 + (np.random.normal(self.mu,self.sigma,self.nn_struct[2]) ) * factor
+        mutant.B3 = self.B3 + (np.random.normal(self.mu,self.sigma,self.nn_struct[3]) ) * factor
         return mutant
 
     def reflex_info(self):
